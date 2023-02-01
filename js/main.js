@@ -10,4 +10,13 @@ function getComputerChoice() {
     return computerChoice
 }
 
-console.log (getComputerChoice())
+function getUserChoice() {
+    let input = (prompt ("Choose Rock, Paper or Scissors"));
+    let result = input.toLowerCase();
+    if (result == "rock" || result == "paper" || result == "scissors") {
+        return;
+    }
+    else { alert ("try again");
+           getUserChoice();
+    }
+}
