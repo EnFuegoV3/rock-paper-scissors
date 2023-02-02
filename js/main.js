@@ -1,7 +1,7 @@
 let rps = [
-    "Rock",
-    "Paper",
-    "Scissors"
+    "rock",
+    "paper",
+    "scissors"
 ];
 
 function getComputerChoice() {
@@ -16,7 +16,7 @@ function getUserChoice() {
     if (weapon === "rock" || weapon === "paper" || weapon === "scissors") {
         return;
     }
-    else { alert ("try again");
+        else { alert ("try again");
            getUserChoice();
     }
 }
@@ -24,7 +24,12 @@ function getUserChoice() {
 function playRound(playerSelection, computerSelection) {
     let result;
     if (playerSelection === computerSelection) {
-        result = "its a tie!" }
-        elseif (playerSelection)
+        result = "its a tie!"; 
+    } else if (playerSelection === "rock" && computerSelection === "scissors" || playerSelection === "scissors" && computerSelection === "paper" || playerSelection === "paper" && computerSelection === "rock") {
+                    result = "you win!";
+                } else { result = "you lose!" }
+                return result;
     }
-}
+
+   
+
