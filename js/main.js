@@ -22,11 +22,13 @@ function getUserChoice() {
 }
 
 function playRound(computer, player) {
+    getUserChoice();
+    getComputerChoice();
     let computer = getComputerChoice();
     let player = getUserChoice();
     if (computer == "Rock" && player == "Scissors") {
         alert ("you lose");}
     
 }
-
-console.log(playRound(computer, player))
+playRound()
+console.log(playRound(computer, player));
