@@ -12,8 +12,8 @@ function getComputerChoice() {
 
 function getUserChoice() {
     let input = (prompt ("Choose Rock, Paper or Scissors"));
-    let result = input.toLowerCase();
-    if (result == "rock" || result == "paper" || result == "scissors") {
+    let weapon = input.toLowerCase();
+    if (weapon === "rock" || weapon === "paper" || weapon === "scissors") {
         return;
     }
     else { alert ("try again");
@@ -21,14 +21,10 @@ function getUserChoice() {
     }
 }
 
-function playRound(computer, player) {
-    getUserChoice();
-    getComputerChoice();
-    let computer = getComputerChoice();
-    let player = getUserChoice();
-    if (computer == "Rock" && player == "Scissors") {
-        alert ("you lose");}
-    
+function playRound(playerSelection, computerSelection) {
+    let result;
+    if (playerSelection === computerSelection) {
+        result = "its a tie!" }
+        elseif (playerSelection)
+    }
 }
-playRound()
-console.log(playRound(computer, player));
