@@ -31,5 +31,9 @@ function playRound(playerSelection, computerSelection) {
                 return result;
     }
 
-   
+   function game() {
+    // add player and computer score
+    // add for loop
+      //call playRound 
+   }
 
