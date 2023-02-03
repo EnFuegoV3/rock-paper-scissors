@@ -33,6 +33,8 @@ function playRound(playerSelection, computerSelection) {
 function game() {
     let playerScore = 0; 
     let computerScore = 0;
+    let playerSelection = getUserChoice();
+    let computerSelection = getComputerChoice();
     playRound(playerSelection, computerSelection);
     for (let n=1; n <= 5; n++) {
         if (result = "you win!") {
@@ -47,8 +49,7 @@ function game() {
     }
 }
 
-const playerSelection = "rock";
-const computerSelection = getComputerChoice();
+
 console.log(game())
 
 
