@@ -32,7 +32,14 @@ function playRound(playerSelection, computerSelection) {
     }
 
    function game() {
-    // add player and computer score
+    let playScore = 0; 
+    let computerScore = 0;
+    for (let n=1; n <= 5; n++) {
+        playRound(playerSelection, computerSelection);
+        if (result === "you win!" * 3) {
+            alert ("You Won the Game!");
+        }   else { alert ("You Lost the Game") }
+    }
     // add for loop
       //call playRound 
    }
