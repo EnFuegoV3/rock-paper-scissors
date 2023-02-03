@@ -43,12 +43,13 @@ function game() {
             computerScore = computerScore++;
         }   else if (playerScore == 3 && computerScore < 3) {
             alert ("You won the game!");
+            break;
         }   else if (playerScore < 3 && computerScore == 3) {
             alert ("You lost the game");
+            break;
         }
     }
 }
-
 
 console.log(game())
 
