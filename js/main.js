@@ -23,10 +23,13 @@ function getUserChoice() {
 function playRound(playerSelection, computerSelection) {
     let result;
     if (playerSelection === computerSelection) {
-        result = "its a tie!"; 
+        result = "its a tie!";
+        alert(result); 
     } else if (playerSelection === "rock" && computerSelection === "scissors" || playerSelection === "scissors" && computerSelection === "paper" || playerSelection === "paper" && computerSelection === "rock") {
                     result = "you win!";
-                } else { result = "you lose!" }
+                    alert(result);
+                } else { result = "you lose!"; alert(result);
+             }
                 return result;
     }
 
