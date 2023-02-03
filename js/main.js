@@ -37,8 +37,12 @@ function game() {
     for (let n=1; n <= 5; n++) {
         if (result = "you win!") {
             playerScore = playerScore++;
-        }   else { result = "you lose!"; 
+        }   else if (result = "you lose!") { 
             computerScore = computerScore++;
+        }   else if (playerScore == 3 && computerScore < 3) {
+            alert ("You won the game!");
+        }   else if (playerScore < 3 && computerScore == 3) {
+            alert ("You lost the game");
         }
     }
 }
