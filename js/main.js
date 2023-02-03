@@ -30,25 +30,25 @@ function playRound(playerSelection, computerSelection) {
                 return result;
     }
 
-function game() { //first iteration
+function game() { //second iteration
     let playerScore = 0; 
     let computerScore = 0;
-    let playerSelection = getUserChoice();
-    let computerSelection = getComputerChoice();
-    playRound(playerSelection, computerSelection);
     for (let n=1; n <= 5; n++) {
-        if (result = "you win!") {
+        let playerSelection = getUserChoice();
+        let computerSelection = getComputerChoice();
+        let outcome = playRound(playerSelection, computerSelection);
+        playRound(playerSelection, computerSelection);
+        if (outcome = "you win!") {
             playerScore = playerScore++;
-        }   else if (result = "you lose!") { 
+        }   else if (outcome = "you lose!") { 
             computerScore = computerScore++;
-        }   else if (playerScore == 3 && computerScore < 3) {
-            alert ("You won the game!");
-            break;
-        }   else if (playerScore < 3 && computerScore == 3) {
-            alert ("You lost the game");
-            break;
-        }
+        }   
     }
+    if (playerScore == 3 && computerScore < 3) {
+        alert ("You won the game!");
+     }  else if (playerScore < 3 && computerScore == 3) {
+        alert ("You lost the game");
+     }
 }
 
 console.log(game())
