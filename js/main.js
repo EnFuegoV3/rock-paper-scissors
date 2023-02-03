@@ -36,10 +36,14 @@ function playRound(playerSelection, computerSelection) {
     let computerScore = 0;
     for (let n=1; n <= 5; n++) {
         playRound(playerSelection, computerSelection);
-        if (result === "you win!" * 3) {
+        if (result === "you won the game!" * 3) {
             alert ("You Won the Game!");
         }   else { alert ("You Lost the Game") }
     }
+
+    const playerSelection = "rock";
+    const computerSelection = getComputerChoice();
+    console.log(playRound(playerSelection, computerSelection));
     // add for loop
       //call playRound 
    }
