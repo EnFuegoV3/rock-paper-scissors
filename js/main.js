@@ -5,8 +5,7 @@ let rps = [
 ];
 
 function getComputerChoice() {
-    let computerChoice = 
-    rps [Math.floor(Math.random() * rps.length)];
+    let computerChoice = rps[Math.floor(Math.random() * rps.length)];
     return computerChoice
 }
 
@@ -32,18 +31,16 @@ function playRound(playerSelection, computerSelection) {
     }
 
    function game() {
-    let playScore = 0; 
+    let playerScore = 0; 
     let computerScore = 0;
     for (let n=1; n <= 5; n++) {
         playRound(playerSelection, computerSelection);
-        if (result === "you won the game!" * 3) {
-            alert ("You Won the Game!");
-        }   else { alert ("You Lost the Game") }
+        if (result === "you win!") {
+            playerScore++;
+        }   else { computerScore++ }
     }
 
-    const playerSelection = "rock";
-    const computerSelection = getComputerChoice();
-    console.log(playRound(playerSelection, computerSelection));
+    
     // add for loop
       //call playRound 
    }
