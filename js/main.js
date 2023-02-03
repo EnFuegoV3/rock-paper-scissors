@@ -30,7 +30,7 @@ function playRound(playerSelection, computerSelection) {
                 return result;
     }
 
-function game() { //second iteration
+function game() { //third iteration
     let playerScore = 0; 
     let computerScore = 0;
     for (let n=1; n <= 5; n++) {
@@ -42,7 +42,9 @@ function game() { //second iteration
             playerScore = playerScore++;
         }   else if (outcome = "you lose!") { 
             computerScore = computerScore++;
-        }   
+        }   else if (playerScore == 3 || computerScore == 3) {
+            break;
+        }
     }
     if (playerScore == 3 && computerScore < 3) {
         alert ("You won the game!");
