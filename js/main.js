@@ -30,18 +30,25 @@ function playRound(playerSelection, computerSelection) {
                 return result;
     }
 
-   function game() {
+function game() {
     let playerScore = 0; 
     let computerScore = 0;
+    playRound(playerSelection, computerSelection);
     for (let n=1; n <= 5; n++) {
-        playRound(playerSelection, computerSelection);
-        if (result === "you win!") {
-            playerScore++;
-        }   else { computerScore++ }
+        if (result = "you win!") {
+            playerScore = playerScore++;
+        }   else { result = "you lose!"; 
+            computerScore = computerScore++;
+        }
     }
+}
 
-    
+const playerSelection = "rock";
+const computerSelection = getComputerChoice();
+console.log(game())
+
+
     // add for loop
       //call playRound 
-   }
+   
 
