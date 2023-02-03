@@ -30,7 +30,7 @@ function playRound(playerSelection, computerSelection) {
                 return result;
     }
 
-function game() {
+function game() { //first iteration
     let playerScore = 0; 
     let computerScore = 0;
     let playerSelection = getUserChoice();
