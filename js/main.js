@@ -24,11 +24,11 @@ function playRound(playerSelection, computerSelection) {
     let result;
     if (playerSelection === computerSelection) {
         result = "its a tie!";
-        alert(result); 
+        alert("its a tie"); 
     } else if (playerSelection === "rock" && computerSelection === "scissors" || playerSelection === "scissors" && computerSelection === "paper" || playerSelection === "paper" && computerSelection === "rock") {
                     result = "you win!";
-                    alert(result);
-                } else { result = "you lose!"; alert(result);
+                    alert("you win!");
+                } else { result = "you lose!"; alert("you lose!");
              }
                 return result;
     }
