@@ -53,7 +53,7 @@ function game() { //third iteration
      }
 }
 
-console.log(game())
+game()
 
 
     // add for loop
