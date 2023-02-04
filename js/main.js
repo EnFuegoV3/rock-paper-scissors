@@ -44,6 +44,8 @@ function game() { //third iteration
         }   else if (outcome == "you lose!") { 
             computerScore++;
             console.log("you lost the round!");
+        }   else if (outcome == "its a tie!") {
+            console.log("round is a draw");
         }   else if (playerScore === 3 || computerScore === 3) {
             break;
         }
