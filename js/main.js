@@ -38,23 +38,21 @@ function game() {
         const computerSelection = getComputerChoice();
         let outcome = playRound(playerSelection, computerSelection);
         playRound(playerSelection, computerSelection);
-        if (outcome == "you win!") {
-            playerScore++;
-            console.log("you won the round!");
+        if (playerScore === 3 || computerScore === 3) {
+            break;
         }   else if (outcome == "you lose!") { 
             computerScore++;
             console.log("you lost the round!");
         }   else if (outcome == "its a tie!") {
             console.log("round is a draw");
-        }   else if (playerScore === 3 || computerScore === 3) {
-            break;
+        }   else if (outcome == "you win!") {
+            playerScore++;
+            console.log("you won the round!");
         }
     }
     if (playerScore > computerScore) {
-        alert ("You won the game!");
         console.log("You won the game!");
      }  else if (playerScore < computerScore) {
-        alert ("You lost the game");
         console.log("You lost the game!");
      }  else {console.log("its a tie!");}
 }
