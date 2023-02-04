@@ -45,14 +45,16 @@ function game() { //third iteration
         }   else if (outcome = "you lose!") { 
             computerScore++;
             console.log("you lost the round!");
-        }   else if (playerScore == 3 || computerScore == 3) {
+        }   else if (playerScore === 3 || computerScore === 3) {
             break;
         }
     }
-    if (playerScore == 3 && computerScore < 3) {
+    if (playerScore === 3 && computerScore < 3) {
         alert ("You won the game!");
-     }  else if (playerScore < 3 && computerScore == 3) {
+        console.log("You won the game!");
+     }  else if (playerScore < 3 && computerScore === 3) {
         alert ("You lost the game");
+        console.log("You lost the game!")
      }
 }
 
