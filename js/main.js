@@ -40,9 +40,11 @@ function game() { //third iteration
         let outcome = playRound(playerSelection, computerSelection);
         playRound(playerSelection, computerSelection);
         if (outcome = "you win!") {
-            playerScore = playerScore++;
+            playerScore++;
+            console.log("you won the round!")
         }   else if (outcome = "you lose!") { 
-            computerScore = computerScore++;
+            computerScore++;
+            console.log("you lost the round!");
         }   else if (playerScore == 3 || computerScore == 3) {
             break;
         }
