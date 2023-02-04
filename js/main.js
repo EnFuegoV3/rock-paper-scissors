@@ -34,31 +34,31 @@ function game() { //third iteration
     let playerScore = 0; 
     let computerScore = 0;
     for (let n=1; n <= 5; n++) {
-        let playerSelection = getUserChoice();
-        let computerSelection = getComputerChoice();
+        const playerSelection = getUserChoice();
+        const computerSelection = getComputerChoice();
         let outcome = playRound(playerSelection, computerSelection);
         playRound(playerSelection, computerSelection);
-        if (outcome = "you win!") {
+        if (outcome == "you win!") {
             playerScore++;
             console.log("you won the round!");
-        }   else if (outcome = "you lose!") { 
+        }   else if (outcome == "you lose!") { 
             computerScore++;
             console.log("you lost the round!");
         }   else if (playerScore === 3 || computerScore === 3) {
             break;
         }
     }
-    if (playerScore === 3 && computerScore < 3) {
+    if (playerScore > computerScore) {
         alert ("You won the game!");
         console.log("You won the game!");
-     }  else if (playerScore < 3 && computerScore === 3) {
+     }  else if (playerScore < computerScore) {
         alert ("You lost the game");
-        console.log("You lost the game!")
-     }
+        console.log("You lost the game!");
+     }  else {console.log("its a tie!");}
 }
 
 
-console.log(getUserChoice());
+console.log(game())
 
 
 
