@@ -10,14 +10,13 @@ function getComputerChoice() {
 }
 
 function getUserChoice() {
-    let input = (prompt ("Choose Rock, Paper or Scissors"));
-    let weapon = input.toLowerCase();
-    if (weapon === "rock" || weapon === "paper" || weapon === "scissors") {
-        return;
+    let input = prompt("Choose Rock, Paper or Scissors").toLowerCase();
+    if (input === "rock" || input === "paper" || input === "scissors") {
+        return input;
     }
         else { alert ("try again");
            getUserChoice();
-    }
+    }   
 }
 
 function playRound(playerSelection, computerSelection) {
@@ -41,7 +40,7 @@ function game() { //third iteration
         playRound(playerSelection, computerSelection);
         if (outcome = "you win!") {
             playerScore++;
-            console.log("you won the round!")
+            console.log("you won the round!");
         }   else if (outcome = "you lose!") { 
             computerScore++;
             console.log("you lost the round!");
@@ -58,7 +57,9 @@ function game() { //third iteration
      }
 }
 
-game()
+
+console.log(getUserChoice());
+
 
 
     // add for loop
