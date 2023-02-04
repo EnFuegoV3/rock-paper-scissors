@@ -30,7 +30,7 @@ function playRound(playerSelection, computerSelection) {
                 return result;
     }
 
-function game() { //third iteration
+function game() {
     let playerScore = 0; 
     let computerScore = 0;
     for (let n=1; n <= 5; n++) {
@@ -60,7 +60,7 @@ function game() { //third iteration
 }
 
 
-console.log(game())
+game()
 
 
 
