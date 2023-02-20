@@ -28,7 +28,7 @@ function playRound(playerSelection, computerSelection) {
                     result = "you win!";
                 } else { result = "you lose!";
              }
-                return result;
+                console.log(result);
     }
 
 /*function game() {
@@ -61,22 +61,19 @@ function playRound(playerSelection, computerSelection) {
 const rock = document.querySelector('#rock');
     rock.addEventListener('click', function () {
         let playerSelection = "rock";
-        playRound(playerSelection, )
-        console.log(playerSelection);
+        playRound(playerSelection, getComputerChoice());
     });
     
 const paper = document.querySelector('#paper');
     paper.addEventListener('click', function () {
         let playerSelection = "paper";
-        playRound(playerSelection, )
-        console.log(playerSelection);
+        playRound(playerSelection, getComputerChoice());
     });
 
 const scissors = document.querySelector('#scissors');
     scissors.addEventListener('click', function () {
         let playerSelection = "scissors";
-        playRound(playerSelection, )
-        console.log(playerSelection);
+        playRound(playerSelection, getComputerChoice());
     });
 
 
