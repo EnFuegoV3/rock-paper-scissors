@@ -20,6 +20,7 @@ function getUserChoice() {
 }
 
 function playRound(playerSelection, computerSelection) {
+    
     let result;
     if (playerSelection === computerSelection) {
         result = "its a tie!";
@@ -30,7 +31,7 @@ function playRound(playerSelection, computerSelection) {
                 return result;
     }
 
-function game() {
+/*function game() {
     let playerScore = 0; 
     let computerScore = 0;
     for (let n=1; n <= 5; n++) {
@@ -55,10 +56,13 @@ function game() {
      }  else if (playerScore < computerScore) {
         console.log("You lost the game!");
      }  else {console.log("its a tie!");}
-}
+}*/
+
+const rock = document.querySelector('#rock');
+    rock.addEventListener('click', playRound);
+    
 
 
-game()
 
 
 
