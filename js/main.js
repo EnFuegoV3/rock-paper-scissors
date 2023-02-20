@@ -59,8 +59,25 @@ function playRound(playerSelection, computerSelection) {
 }*/
 
 const rock = document.querySelector('#rock');
-    rock.addEventListener('click', playRound);
+    rock.addEventListener('click', function () {
+        let playerSelection = "rock";
+        playRound(playerSelection, )
+        console.log(playerSelection);
+    });
     
+const paper = document.querySelector('#paper');
+    paper.addEventListener('click', function () {
+        let playerSelection = "paper";
+        playRound(playerSelection, )
+        console.log(playerSelection);
+    });
+
+const scissors = document.querySelector('#scissors');
+    scissors.addEventListener('click', function () {
+        let playerSelection = "scissors";
+        playRound(playerSelection, )
+        console.log(playerSelection);
+    });
 
 
 
