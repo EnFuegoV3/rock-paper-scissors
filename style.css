@@ -1,0 +1,17 @@
+/* *{ border: 1px solid red} */
+
+h1 {
+    color: rgb(44, 175, 134);
+    text-align: center;
+}
+
+.weapons {
+    text-align: center;
+    ;
+}
+
+button {
+    flex: 1;
+
+}
+

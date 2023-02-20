@@ -20,26 +20,48 @@ function getUserChoice() {
 }
 
 function playRound(playerSelection, computerSelection) {
-    
+    let playerScore = 0;
+    let computerScore = 0;
     let result;
     if (playerSelection === computerSelection) {
         result = "its a tie!";
     } else if (playerSelection === "rock" && computerSelection === "scissors" || playerSelection === "scissors" && computerSelection === "paper" || playerSelection === "paper" && computerSelection === "rock") {
                     result = "you win!";
+                    playerScore++;
                 } else { result = "you lose!";
+                         computerScore++;
              }
-             
-                console.log(result);
+                const outcome = document.querySelector('#outcome');
+                outcome.textContent = result;
+    while (playerScore == 5 && computerScore < 5){
+        
+    }
     }
 
-/*function game() {
+    const rock = document.querySelector('#rock');
+    rock.addEventListener('click', function () { //on press initializes plaRound function with corresponding button weapon
+    let playerSelection = "rock";
+    playRound(playerSelection, getComputerChoice());
+    });
+    const paper = document.querySelector('#paper');
+    paper.addEventListener('click', function () {
+    let playerSelection = "paper";
+    playRound(playerSelection, getComputerChoice());
+    });
+    const scissors = document.querySelector('#scissors');
+    scissors.addEventListener('click', function () {
+    let playerSelection = "scissors";
+    playRound(playerSelection, getComputerChoice());
+    });
+
+
+
+    function game() {
     let playerScore = 0; 
     let computerScore = 0;
     for (let n=1; n <= 5; n++) {
-        const playerSelection = getUserChoice();
-        const computerSelection = getComputerChoice();
+        
         let outcome = playRound(playerSelection, computerSelection);
-        playRound(playerSelection, computerSelection);
         if (playerScore === 3 || computerScore === 3) {
             break;
         }   else if (outcome == "you lose!") { 
@@ -57,25 +79,10 @@ function playRound(playerSelection, computerSelection) {
      }  else if (playerScore < computerScore) {
         console.log("You lost the game!");
      }  else {console.log("its a tie!");}
-}*/
+}
 
-const rock = document.querySelector('#rock');
-    rock.addEventListener('click', function () { //on press initializes plaRound function with corresponding button weapon
-        let playerSelection = "rock";
-        playRound(playerSelection, getComputerChoice());
-    });
-    
-const paper = document.querySelector('#paper');
-    paper.addEventListener('click', function () {
-        let playerSelection = "paper";
-        playRound(playerSelection, getComputerChoice());
-    });
+//game();
 
-const scissors = document.querySelector('#scissors');
-    scissors.addEventListener('click', function () {
-        let playerSelection = "scissors";
-        playRound(playerSelection, getComputerChoice());
-    });
 
 
 
