@@ -28,6 +28,7 @@ function playRound(playerSelection, computerSelection) {
                     result = "you win!";
                 } else { result = "you lose!";
              }
+             
                 console.log(result);
     }
 
@@ -59,7 +60,7 @@ function playRound(playerSelection, computerSelection) {
 }*/
 
 const rock = document.querySelector('#rock');
-    rock.addEventListener('click', function () {
+    rock.addEventListener('click', function () { //on press initializes plaRound function with corresponding button weapon
         let playerSelection = "rock";
         playRound(playerSelection, getComputerChoice());
     });
