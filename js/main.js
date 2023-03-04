@@ -107,10 +107,6 @@ function game2() {
         final.textContent = "YOU LOST THE GAME!";
      }
      
-     while(computerScore || playerScore === 6) {
-        location.reload();
-     }
-     
 }
 
 
