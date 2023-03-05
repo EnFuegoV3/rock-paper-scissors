@@ -24,16 +24,18 @@ const scores = document.querySelector('#scores');
 const final = document.querySelector('#final');
 const player = document.createElement('span');
 const computer = document.createElement('span');
+const reset = document.querySelector('#reset');
 final.classList.add('final');
 player.classList.add('score');
 computer.classList.add('score');
 scores.appendChild(player);
 scores.appendChild(computer);
+reset.addEventListener('click', function() {
+    location.reload();
+})
 
 let playerScore = 0;
 let computerScore = 0;
-
-
 
 function playRound(playerSelection, computerSelection) {
     let result;
@@ -47,9 +49,7 @@ function playRound(playerSelection, computerSelection) {
              }
                 const roundOutcome = document.querySelector('#outcome');
                 roundOutcome.textContent = result;
-                return result;
-                
-                
+                return result;           
     }
 
 const buttons = document.querySelectorAll('button')
